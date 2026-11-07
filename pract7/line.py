@@ -1,5 +1,5 @@
 from collections import deque
-class LIFO():
+class Stack():
     def __init__(self):
         self.items = deque()
 
@@ -14,9 +14,6 @@ class LIFO():
 
     def peek(self):
         return self.items[-1] if not self.is_empty() else None
-
-    def size(self):
-        return len(self.items)
     
 class Queue():
     def __init__(self):
@@ -33,11 +30,8 @@ class Queue():
 
     def peek(self):
         return self.items[-1] if not self.is_empty() else None
-
-    def size(self):
-        return len(self.items)
     
-stack = LIFO()
+stack = Stack()
 stack.push(1)
 stack.push(2)
 stack.push(3)
